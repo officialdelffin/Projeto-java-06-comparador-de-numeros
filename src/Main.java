@@ -68,23 +68,47 @@ class ComparadorNumeros {
         if ( verificacaoDeLoop.equals( "COMEÇAR" ) ) {
 
 
-            // Pedindo o usuário para escolher o primeiro número :
+            // Pedindo o usuário para escolher o primeiro número e armazendo ele:
             System.out.println( "Digite o primeiro número : " );
-
-
-            // Recebenco o primeiro número :
             numeroUm = inputUsuario.nextInt();
 
 
-            // Pedindo o usuário para escolher o segundo número :
+            // Pedindo o usuário para escolher o segundo número e armazendo ele :
             System.out.println( "Digite o segundo número : " );
-
-
-            // Recebenco o primeiro número :
             numeroDois = inputUsuario.nextInt();
 
 
-            System.out.println( numeroUm + numeroDois );
+            // Se o primeiro e segundo número são iguais :
+            if ( numeroUm == numeroDois ) {
+
+
+                // Avisa o usuário que os número são iguais :
+                System.out.println( "O número " + " é igual ao número " + numeroDois + "." );
+
+
+            }
+
+
+            // Se o primeiro número for maior que o segundo :
+            else if ( numeroUm > numeroDois ) {
+
+
+                // Avisa que o primeiro número é maior que o segundo :
+                System.out.println( "O número " + numeroUm + " é maior que o numero " + numeroDois + "." );
+
+
+            }
+
+
+            // Se o numero for diferente dessas duas ultimas verificações :
+            else {
+
+
+                // Avisa que o primeiro numero é menor que o segundo :
+                System.out.println( "O número " + numeroUm + " é menor que o numero " + numeroDois + "." );
+
+
+            }
 
 
         }
