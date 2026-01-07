@@ -67,6 +67,8 @@ class ComparadorNumeros {
             System.out.println( "Digite o segundo número : " );
             numeroDois = inputUsuario.nextInt();
 
+
+            // Solução para o Bug do Scanner :
             verificacaoDeLoop = inputUsuario.nextLine();
 
 
