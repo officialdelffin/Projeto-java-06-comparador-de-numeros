@@ -39,7 +39,7 @@ class ComparadorNumeros {
     int numeroUm   = 0;
     int numeroDois = 0;
 
-    String verificacaoDeLoop = "";
+    String verificacaoDeLoop = "SIM";
 
 
     // Métodos :
@@ -55,17 +55,7 @@ class ComparadorNumeros {
         // Texto de apresentação :
         System.out.println( "Olá, seja bem-vindo ao comparador numerico, onde ele avisa qual número é maior ou se eles são números iguais." );
 
-
-        // Pede o usuário para que escolha se começa uma consulta ou se encerra o sistema :
-        System.out.println( "Digite COMEÇAR para fazer uma nova consulta ou ENCERRAR para que o sistema para de rodar :" );
-
-
-        // Recebe a escolha do usuário :
-        verificacaoDeLoop = inputUsuario.nextLine();
-
-
-        // Se o usuário digitou COMEÇAR o sistema inicia
-        if ( verificacaoDeLoop.equals( "COMEÇAR" ) ) {
+        while ( verificacaoDeLoop.equals( "SIM" ) ) {
 
 
             // Pedindo o usuário para escolher o primeiro número e armazendo ele:
@@ -77,13 +67,15 @@ class ComparadorNumeros {
             System.out.println( "Digite o segundo número : " );
             numeroDois = inputUsuario.nextInt();
 
+            verificacaoDeLoop = inputUsuario.nextLine();
+
 
             // Se o primeiro e segundo número são iguais :
             if ( numeroUm == numeroDois ) {
 
 
                 // Avisa o usuário que os número são iguais :
-                System.out.println( "O número " + " é igual ao número " + numeroDois + "." );
+                System.out.println( "O número " + numeroUm + " é igual ao número " + numeroDois + "." );
 
 
             }
@@ -111,7 +103,19 @@ class ComparadorNumeros {
             }
 
 
+            // Pede ao usuário para escolher se vai fazer uma nova comparaçao :
+            System.out.println( "Se quer tentar novamente digite SIM, se não aperte em qualquer outra tecla. " );
+
+
+            // Recebe a escolha do usuário :
+            verificacaoDeLoop = inputUsuario.nextLine();
+
+
         }
+
+
+        // Assim que sair do loop avisa o encerramento :
+        System.out.println( "Sistema encerrado!" );
 
 
     }
