@@ -55,6 +55,8 @@ class ComparadorNumeros {
         // Texto de apresentação :
         System.out.println( "Olá, seja bem-vindo ao comparador numerico, onde ele avisa qual número é maior ou se eles são números iguais." );
 
+
+        // Enquanto a resposta do usuário for SIM :
         while ( verificacaoDeLoop.equals( "SIM" ) ) {
 
 
